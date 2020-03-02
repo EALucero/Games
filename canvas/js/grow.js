@@ -36,7 +36,7 @@
           }
           ctx.clearRect(295, 250, html.width, html.height);
           ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 295, 250, frameWidth, frameHeight);
-        }, 1000);
+        }, 500);
       }else if (tree.htmlPreg <= 5) {
           setInterval(function(){
             column++;
@@ -46,7 +46,7 @@
             ctx.clearRect((295,225), 250, html.width, html.height);
             ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 295, 250, frameWidth, frameHeight);
             ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 225, 250, frameWidth, frameHeight);
-          }, 1000);
+          }, 500);
         }else if (tree.htmlPreg <= 7) {
             setInterval(function(){
               column++;
@@ -57,7 +57,7 @@
               ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 295, 250, frameWidth, frameHeight);
               ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 225, 250, frameWidth, frameHeight);
               ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 155, 250, frameWidth, frameHeight);
-            }, 1000);
+            }, 500);
           }else if (tree.htmlPreg <= 9) {
               setInterval(function(){
                 column++;
@@ -69,7 +69,7 @@
                 ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 225, 250, frameWidth, frameHeight);
                 ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 155, 250, frameWidth, frameHeight);
                 ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 85, 250, frameWidth, frameHeight);
-              }, 1000);
+              }, 500);
             }else if (tree.htmlPreg == 10) {
                 setInterval(function(){
                   column++;
@@ -82,7 +82,7 @@
                   ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 155, 250, frameWidth, frameHeight);
                   ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 85, 250, frameWidth, frameHeight);
                   ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 15, 250, frameWidth, frameHeight);
-                }, 1000);
+                }, 500);
               }
 //CSS
     if (tree.cssPreg <= 3) {
@@ -91,9 +91,9 @@
           if (column > numColumns - 1){
               column = 0;
           }
-          ctx.clearRect(295, 250, css.width, css.height);
+          ctx.clearRect(295, 350, css.width, css.height);
           ctx.drawImage(css, column*fW2, row*fH2, fW2, fH2, 295, 350, fW2, fH2);
-        }, 1000);
+        }, 500);
       }else if (tree.cssPreg <= 5) {
           setInterval(function(){
             column++;
@@ -103,7 +103,7 @@
             ctx.clearRect((295,225), 350, css.width, css.height);
             ctx.drawImage(css, column*fW2, row*fH2, fW2, fH2, 295, 350, fW2, fH2);
             ctx.drawImage(css, column*fW2, row*fH2, fW2, fH2, 225, 350, fW2, fH2);
-          }, 1000);
+          }, 500);
         }else if (tree.cssPreg <= 7) {
             setInterval(function(){
               column++;
@@ -114,7 +114,7 @@
               ctx.drawImage(css, column*fW2, row*fH2, fW2, fH2, 295, 350, fW2, fH2);
               ctx.drawImage(css, column*fW2, row*fH2, fW2, fH2, 225, 350, fW2, fH2);
               ctx.drawImage(css, column*fW2, row*fH2, fW2, fH2, 155, 350, fW2, fH2);
-            }, 1000);
+            }, 500);
           }else if (tree.cssPreg <= 9) {
               setInterval(function(){
                 column++;
@@ -126,7 +126,7 @@
                 ctx.drawImage(html, column*fW2, row*fH2, fW2, fH2, 225, 350, fW2, fH2);
                 ctx.drawImage(html, column*fW2, row*fH2, fW2, fH2, 155, 350, fW2, fH2);
                 ctx.drawImage(html, column*fW2, row*fH2, fW2, fH2, 85, 350, fW2, fH2);
-              }, 1000);
+              }, 500);
             }else if (tree.cssPreg == 10) {
                 setInterval(function(){
                   column++;
@@ -139,7 +139,7 @@
                   ctx.drawImage(css, column*fW2, row*fH2, fW2, fH2, 155, 350, fW2, fH2);
                   ctx.drawImage(css, column*fW2, row*fH2, fW2, fH2, 85, 350, fW2, fH2);
                   ctx.drawImage(css, column*fW2, row*fH2, fW2, fH2, 15, 350, fW2, fH2);
-                }, 1000);
+                }, 500);
               }
 //JS
     if (tree.jsPreg <= 3) {
@@ -150,7 +150,7 @@
           }
           ctx.clearRect(295, 450, js.width, js.height);
           ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 295, 450, fW3, fH3);
-        }, 1000);
+        }, 500);
       }else if (tree.jsPreg <= 5) {
           setInterval(function(){
             column++;
@@ -160,7 +160,7 @@
             ctx.clearRect((295,225), 450, js.width, js.height);
             ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 295, 450, fW3, fH3);
             ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 225, 450, fW3, fH3);
-          }, 1000);
+          }, 500);
         }else if (tree.jsPreg <= 7) {
             setInterval(function(){
               column++;
@@ -171,7 +171,7 @@
               ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 295, 450, fW3, fH3);
               ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 225, 450, fW3, fH3);
               ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 155, 450, fW3, fH3);
-            }, 1000);
+            }, 500);
           }else if (tree.jsPreg <= 9) {
               setInterval(function(){
                 column++;
@@ -183,7 +183,7 @@
                 ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 225, 450, fW3, fH3);
                 ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 155, 450, fW3, fH3);
                 ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 85, 450, fW3, fH3);
-              }, 1000);
+              }, 500);
             }else if (tree.jsPreg == 10) {
                 setInterval(function(){
                   column++;
@@ -196,5 +196,5 @@
                   ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 155, 450, fW3, fH3);
                   ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 85, 450, fW3, fH3);
                   ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 15, 450, fW3, fH3);
-                }, 1000);
+                }, 500);
               }
