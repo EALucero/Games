@@ -5,7 +5,7 @@
 
 //recibe valores de algun lado (?)
 
-    let tree = {htmlPreg: 6, cssPreg: 5, jsPreg: 7};
+    let tree = {htmlPreg: 10, cssPreg: 5, jsPreg: 7};
 
     let html = new Image();
 //    let css = new Image();
@@ -24,72 +24,66 @@
     var row = 0;
     var column = 0;
 
-    setInterval(function(){
-        column++;
-        if (column > numColumns - 1){
-            column = 0;
-        }
+    
 
-        ctx.clearRect((335,255,175,95), 250, html.width, html.height);
-        ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 335, 250, frameWidth, frameHeight);
-        ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 255, 250, frameWidth, frameHeight);
-        ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 175, 250, frameWidth, frameHeight);
-        ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 95, 250, frameWidth, frameHeight);
-        ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 15, 250, frameWidth, frameHeight);
-  }, 500);
-
-//  ctx.clearRect(325, 350, css.width, css.height);
-//  ctx.drawImage(css, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 325, 350, frameWidth, frameHeight);
-
-//  ctx.clearRect(325, 450, js.width, js.height);
-//  ctx.drawImage(js, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 325, 450, frameWidth, frameHeight);
-
-/*    if (tree.htmlPreg >= 2) {
-      setInterval(function(){
-        column++;
-        if (column > numColumns - 1){
-            column = 0;
-        }
-        ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 325, 250, frameWidth, frameHeight);
-        ctx.clearRect(325, 250, html.width, html.height);
-      }, 500);
-
-      if (tree.htmlPreg >= 4) {
+    if (tree.htmlPreg <= 3) {
         setInterval(function(){
           column++;
-          ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 325, 250, frameWidth, frameHeight);
-          ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 245, 250, frameWidth, frameHeight);
-          ctx.clearRect(325, 250, html.width, html.height);
-          ctx.clearRect(245, 250, html.width, html.height);
-        }, 500);
-
-        if (tree.htmlPreg >= 6) {
-          html.onload = function() {
-            ctx.drawImage(html,325,200)
-            ctx.drawImage(html,245,200)
-            ctx.drawImage(html,165,200)
+          if (column > numColumns - 1){
+              column = 0;
           }
-
-          if (tree.htmlPreg >= 8) {
-            html.onload = function() {
-              ctx.drawImage(html,325,200)
-              ctx.drawImage(html,245,200)
-              ctx.drawImage(html,165,200)
-              ctx.drawImage(html,85,200)
+          ctx.clearRect(335, 250, html.width, html.height);
+          ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 335, 250, frameWidth, frameHeight);
+        }, 1000);
+    }else if (tree.htmlPreg <= 5) {
+        setInterval(function(){
+          column++;
+          if (column > numColumns - 1){
+              column = 0;
+          }
+          ctx.clearRect((335,255), 250, html.width, html.height);
+          ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 335, 250, frameWidth, frameHeight);
+          ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 255, 250, frameWidth, frameHeight);
+        }, 1000);
+      }else if (tree.htmlPreg <= 7) {
+          setInterval(function(){
+            column++;
+            if (column > numColumns - 1){
+                column = 0;
             }
-            if (tree.htmlPreg >= 10) {
-              html.onload = function() {
-                ctx.drawImage(html,325,200)
-                ctx.drawImage(html,245,200)
-                ctx.drawImage(html,165,200)
-                ctx.drawImage(html,85,200)
-                ctx.drawImage(html,5,200)
+            ctx.clearRect((335,255,175), 250, html.width, html.height);
+            ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 335, 250, frameWidth, frameHeight);
+            ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 255, 250, frameWidth, frameHeight);
+            ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 175, 250, frameWidth, frameHeight);
+          }, 1000);
+        }else if (tree.htmlPreg <= 9) {
+            setInterval(function(){
+              column++;
+              if (column > numColumns - 1){
+                  column = 0;
               }
+              ctx.clearRect((335,255,175,95), 250, html.width, html.height);
+              ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 335, 250, frameWidth, frameHeight);
+              ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 255, 250, frameWidth, frameHeight);
+              ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 175, 250, frameWidth, frameHeight);
+              ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 95, 250, frameWidth, frameHeight);
+            }, 1000);
+          }else if (tree.htmlPreg == 10) {
+              setInterval(function(){
+                column++;
+                if (column > numColumns - 1){
+                    column = 0;
+                }
+                ctx.clearRect((295,225,155,85,15), 250, html.width, html.height);
+                ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 295, 250, frameWidth, frameHeight);
+                ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 225, 250, frameWidth, frameHeight);
+                ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 155, 250, frameWidth, frameHeight);
+                ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 85, 250, frameWidth, frameHeight);
+                ctx.drawImage(html, column*frameWidth, row*frameHeight, frameWidth, frameHeight, 15, 250, frameWidth, frameHeight);
+              }, 1000);
             }
-          }
-        }
-      }
-    }
+
+
 /*     if (tree.cssPreg >= 2) {
       css.onload = function() {
         ctx.drawImage(css,325,300)
