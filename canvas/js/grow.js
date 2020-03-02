@@ -161,7 +161,7 @@
             ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 295, 450, fW3, fH3);
             ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 225, 450, fW3, fH3);
           }, 1000);
-        }else if (tree.htmlPreg <= 7) {
+        }else if (tree.jsPreg <= 7) {
             setInterval(function(){
               column++;
               if (column > numColumns - 1){
@@ -172,20 +172,19 @@
               ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 225, 450, fW3, fH3);
               ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 155, 450, fW3, fH3);
             }, 1000);
-          }else if (tree.htmlPreg <= 9) {
+          }else if (tree.jsPreg <= 9) {
               setInterval(function(){
                 column++;
                 if (column > numColumns - 1){
                     column = 0;
                 }
                 ctx.clearRect((295,225,155,85), 450, js.width, js.height);
-                html.onload = function(){
                 ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 295, 450, fW3, fH3);
                 ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 225, 450, fW3, fH3);
                 ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 155, 450, fW3, fH3);
                 ctx.drawImage(js, column*fW3, row*fH3, fW3, fH3, 85, 450, fW3, fH3);
-              }}, 1000);
-            }else if (tree.htmlPreg == 10) {
+              }, 1000);
+            }else if (tree.jsPreg == 10) {
                 setInterval(function(){
                   column++;
                   if (column > numColumns - 1){
