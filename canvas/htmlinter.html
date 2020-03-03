@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>css</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body class="bg-light">
+    <main>
+      <div class="">
+        <h2>HTML intermedio</h2>
+          <h3>Tablas HTML</h3>
+            <p>Una tabla en html viene marcada por las etiquetas <xmp><table> </table></xmp>. Entre esas dos etiquetas definiremos la tabla, las celdas que queremos, las columnas y las características de cada uno de estos parámetros. Pero vamos a empezar explicándote la etiqueta <xmp><table></xmp>.</p>
+            <p>Ya hemos dicho que esta etiqueta nos indica que empieza una tabla, pero… ¿podemos predefinir  características de esa tabla? Por supuesto que sí. Una tabla admite muchos parámetros. Nosotros vamos a explicarte los principales.</p>
+          <h4>La tabla HTML: <xmp><table></xmp></h4>
+            <p>Como ya ocurre con la etiqueta body, a una tabla también lo podemos definir el fondo de la misma. Esto lo podemos conseguir con el parámetro “bgcolor”, que nos pondrá un color de fondo,  o “background” para poner una imagen de fondo. Recuerda que si la imagen es más pequeña que la tabla, ésta se repetirá tanto a lo ancho como a lo largo.</p>
+            <p>Otro aspecto que podemos definir de la tabla es el borde. Esto lo haremos con el parámetro “border”. Como en todas los parámetros que ya hemos visto escribiremos: border= “x” siendo la x un número. Ese número indicará el grosor del borde. Si no ponemos borde o lo escribimos “0”, la tabla no mostrará borde ninguno. Por supuesto, también podemos darle color al borde, escribiendo la etiqueta “bordercolor” e indicando el color que queramos para nuestro borde.</p>
+            <p>El parámetro “width” indircará la anchura de la tabla. Esta anchura la podemos poner en píxeles (width= “300”) o con porcentaje (width= “100%”).</p>
+            <p>Dos parámetros más son cellspacing (que define el espacio entre las celdas de la tabla) y cellpadding  (que le marca a la tabla el espacio que debe dejar alrededor del texto dentro de una celda).</p>
+            <p>Como ejemplo, escribiremos el hipotético supuesto de querer una tabla que sea ancha al 100%, con un borde azul de un píxel de grosor y con un cellpadding de 10 y con un cellspacing de 10. El código quedaría de la siguiente forma.</p>
+            <xmp>
+              <html>
+                <head></head>
+                <body>
+                  Hola mundo!<br>
+                  <b>Esto es negrita.</b><br>
+                  <i>Y esto it&aacute;lica.</i><br>
+                </body>
+              </html>
+            </xmp>
+
+            <p>Generará el siguiente resultado:</p>
+            <html>
+              <head></head>
+              <body>
+                Hola mundo!<br>
+                <b>Esto es negrita.</b><br>
+                <i>Y esto it&aacute;lica.</i><br>
+              </body>
+            </html>
+
+      </div>
+      <div class="">
+        <h2>CSS</h2>
+      </div>
+      <div class="">
+        <h2>JS</h2>
+      </div>
+    </main>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>html</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <nav>
+    <a href="#">1.Introducción a HTML</a>
+    <a href="#">2.Extructura básica de una página web</a>
+    <a href="#">3.Meta tags básicos</a>
+    <a href="#">4.Etiqueta body</a>
+    <a href="#">5.Formateo de texto</a>
+    <a href="#">6.Parrafos y saltos de línea</a>
+    <a href="#">7.Comentarios en HTML</a>
+    <a href="#">8.Separadores: Etiqueta hr</a>
+    <a href="#">9.Encabezados</a>
+    <a href="#">10.Caracteres especiales</a>
+    <a href="#">11.Tablas HTML</a>
+    <a href="#">12.Listas HTML</a>
+    <a href="#">13.Imágenes HTML</a>
+    <a href="#">14.Mapas de imágenes</a>
+    <a href="#">15.Enlaces HTML</a>
+    <a href="#">16.Formlarios I: Formularios HTML</a>
+    <a href="#">17.Formlarios II: Campos de texto</a>
+    <a href="#">18.Formlarios III: Listas de opciones</a>
+    <a href="#">19.Formularios IV: botones submit y reset</a>
+    <a href="#">20. Formularios V: hidden, image y file</a>
+    <a href="#">21. Formularios VI: ejemplo de formulario</a>
+    <a href="#">22. Frames</a>
+    <a href="#">23. Iframe</a>
+    <a href="#">24. Marquee</a>
+    <a href="#">25. HTML 5</a>
+    <a href="#">26. Fieldset y legend</a>
+    <a href="#">27. Blockquote, span, nobr y center</a>
+    <a href="#">28. Idioma</a>
+    <a href="#">29. Javascript y HTML</a>
+  </nav>
+  <body class="bg-light">
+    <main>
+      <div class="">
+        <h2>HTML básico</h2>
+          <h3>Introducción a HTML</h3>
+            <p>HTML (HyperText Markup Language) es el primer lenguaje que una persona debe conocer si desea comenzar a realizar páginas web. HTML no es un lenguaje de programación, sino una lenguaje descriptivo, una serie de etiquetas que el navegador interpretará de una u otra forma para mostrar distintos contenidos por pantalla. Por ejemplo, si creamos un documento de texto que se llame ejemplo.html y que contenga el siguiente texto:</p>
+            <xmp>
+              <html>
+                <head></head>
+                <body>
+                  Hola mundo!<br>
+                  <b>Esto es negrita.</b><br>
+                  <i>Y esto it&aacute;lica.</i><br>
+                </body>
+              </html>
+            </xmp>
+            <p>Generará el siguiente resultado:</p>
+            <html>
+              <head></head>
+              <body>
+                Hola mundo!<br>
+                <b>Esto es negrita.</b><br>
+                <i>Y esto it&aacute;lica.</i><br>
+              </body>
+            </html>
+            <p>Por tanto, aprender HTML consiste en conocer y saber utilizar dichas etiquetas. Para realizar este curso no necesitas ningún software específico, sino que tan sólo necesitas un editor de texto, como puede ser el bloc de notas de Windows, aunque se recomienda usar algún otro editor más especializado que te ayude en la escritura del código, como puede ser el Macromedia Dreamweaver.</p>
+            <p>Este curso consiste en una descripción de las distintas etiquetas y los distintos atributos que tiene HTML, una explicación de cómo se emplean y consejos para mejorar el resultado final de las páginas. Para seguirlo créate un fichero de texto con extensión .html o .html (de esta manera con un simple doble clic, se abrirá tu navegador, lo que te permitirá visualizar todas las pruebas que hagas de manera rápida) y edítalo con cualquier editor de texto. Ves probando los distintos ejemplos que te damos en tu propio ordenador y practica tu mismo con las etiquetas que estudiamos en cada capítulo.</p>
+      </div>
+      <div class="">
+        <h2>Extructura básica de una página web</h2>
+          <p>La estructura básica de una página web es la siguiente:</p>
+          <xmp>
+            <html>
+              <head></head>
+              <body>
+              </body>
+            </html>
+          </xmp>
+          <p>Una estructura HTML se empieza con la etiqueta <xmp><html></xmp> y acaba con <xmp></html></xmp>. Todo lo que esté en medio será la página web. Dentro de <xmp><html></html></xmp> se encuentran 2 partes diferenciadas.La primera <xmp><head></head></xmp> es la cabecera de la página. Aquí irán cierta información que no es directamente el contenido de la página. Aquí se pone el título de la página, los metadatos, estilos, código javascript (todo esto se estudiará en capítulos venideros). La primera que se suele estudiar es <xmp><title></title></xmp>, que indica el título de la página (lo que el navegador pone en la parte superior izquierda).</p>
+          <p>La segunda parte es <xmp><body></body></xmp>. Aquí va propiamente el contenido de la página: fotos, párrafos, formularios, etc. Por ejemplo, siguiendo con el ejemplo de la página anterior, el siguiente código, podemos cambiar el título de la página.</p>
+          <xmp>
+            <html>
+              <head>
+                <title>Esto es el t&iacute;tulo de la p&aacute;gina.</title>
+              </head>
+              <body>
+                Hola mundo!<br>
+                <b>Esto es negrita.</b><br>
+                <i>Y esto it&aacute;lica.</i><br>
+              </body>
+            </html>
+          </xmp>
+          <p>Para verlo, puedes ver el código fuente de esta misma página. Para eso, haz clic en el botón derecho => ver código fuente, y verás así el código HTML de la página:</p>
+          <p>Observad el título en la parte superior izquierda de la página. Además, dentro de <xmp><body></body></xmp> distinguimos varias etiquetas:
+            <xmp><br></xmp> => Indica salto de línea. En HTML un salto de línea normal (púlsando la tecla Enter) no produce un salto de línea en el resultado. Es necesario escribir <xmp><br></xmp> (u otra etiqueta similar).
+            <xmp><b></b></xmp> => Indica comienzo y fin de negrita.
+            <xmp><i></b></xmp> => Itálica.
+            También observamos el código &iaacute; => Esto indica que queremos poner una “i” con acento, es decir, “í”. Esto se explicará en un capítulo posterior.</p>
+          <p>Es importante mencionar que las etiquetas se pueden escribir indistintamente en mayúsculas o minúsculas, es decir <xmp><b>Esto es negrita.</b></xmp> y <xmp><B>Esto es negrita.</B></xmp> produce el mismo resultado. Por otro lado, toda etiqueta que se abre (es decir, se pone la etiqueta sin la barra /) debe cerrarse (es decir, poner su equivalente con el símbolo /), si no, el navegador podría dar resultados inesperados. Excepciones a esto son algunas etiquetas que no lo necesitan, como <xmp><br></xmp> o <xmp><hr></xmp>.</p>
+      </div>
+      <div class="">
+        <h3>Meta tags básicos</h3>
+          <p>No podemos hablar de la estructura básica de un página web sin hablaros de los meta tags. Los meta tags se insertan en la cabecera de la página, entre las etiquetas <xmp><head></head></xmp>. La función de estos tags varía.</p>
+          <p>Pueden ser informativos, para los buscadores y usuarios, indicándoles el tipo de contenido de la web, sus palabras claves, etc. o pueden predefinir una actuación a la página.</p>
+          <p>Los meta tags no se pueden ver a no ser que sea a través del código fuente. Es decir, un meta tag no hace variar la apariencia de una página web, pero son imprescindibles e importantísimos para los buscadores webs.</p>
+          <p>El esquema de un meta tag es el siguiente: <xmp><meta name=” ” content=” “/></xmp>. El “name” muestra el nombre de la etiqueta y el “content” el contenido de esa etiqueta. Los meta tags pueden cerrarse de dos formas: > o /> . La segunda es más correcta aunque los navegadores no muestran diferencia con una u otra.</p>
+          <p>Estas etiquetas juegan un papel importante en el posicionamiento web, especialmente la etiqueta meta description. Si te interesa el posicionamiento SEO, puedes ampliar la información en este <a href="http://useo.es/curso-ceo-ecommerce/">curso gratuito de SEO</a>.</p>
+          <p>Puede que todo esto te suene a chino, no te preocupes. Ahora vamos a pasar a explicarte los meta tags más importantes que debes conocer.</p>
+          <h4>Meta tag “Description”</h4>
+            <p>Este meta es también destinado para los buscadores. En la “description” escribiremos la descripción de la página, de sus contenidos. Esto lo haremos a través de frases cortas y separadas entre ellas por puntos. En nuestra página este meta quedaría de la siguiente manera:</p>
+            <xmp><meta name=”Description” content=”Tutorial html. Meta tags” /></xmp>
+          <h4>Meta tag “language”</h4>
+            <p>Este meta tag le indica al buscador el idioma en el que está escrita la página. En el caso de español en content se pone “es”, en inglés “en”, en francés “fr”… Nuestra página es española así que su meta será el siguiente:</p>
+            <xmp><meta http-equiv=”Content-Language” content=”es”/></xmp>
+          <h4>Meta tag “Distribution”</h4>
+            <p>Este meta es importante. Marca la distribución que queremos que se haga de nuestra web en Internet. Si queremos que se distribuya por todo el mundo en “content” indicaremos “global”. Escribir este meta en global es lo más recomendable. Así pues nuestra página incluirá…</p>
+            <xmp><meta name=”distribution” content=”global”/></xmp>
+          <h4>Meta tag “Robots”</h4>
+            <p>Puede que no queramos que nuestra página sea indexada por los robots de los buscadores Web. En ese caso debemos indicárselo con el meta “Robots”. En content variará la respuesta dependiendo del valor que escribamos.</p>
+            <p>Los valores “all” e “index” indicarán que queremos que se indexe toda la página. Los valores “none” y “noindex” indicarán que no queremos que se indexe nada. El valor “follow” indica que queremos que el robot siga los vínculos externos de nuestra web y “nofollow” indicará lo contrario.</p>
+            <p>Como resumen, y siguiendo el ejemplo del apartado “introducción al html” aunque cambiando el “title”, nuestros meta tags serían los siguientes:</p>
+            <xmp>
+              <html>
+                <head>
+                  <title>Meta tags básicos.</title>
+                  <meta http-equiv="Content-Language" content="es"/>
+                  <meta name="Keywords" content="tutorial,html"/>
+                  <meta name="Description" content="Tutorial html. Meta tags"/>
+                  <meta name="Distribution" content="global"/>
+                  <meta name="Robots" content="all"/>
+                </head>
+                <body>
+                  Hola mundo!<br>
+                  <b>Esto es negrita.</b><br>
+                  <i>Y esto it&aacute;lica.</i><br>
+                </body>
+              </html>
+            </xmp>
+      </div>
+      <div class="">
+        <h3>Etiqueta body</h3>
+          <p>Anteriormente os hemos explicado que todo lo que queramos que se vea en nuestra página web deberemos escribirlo dentro de la etiqueta body. Eso es lo que llamamos el “cuerpo” del documento. Es la parte visible. Pero debes saber que ese cuerpo, o sea, que la etiqueta body también podemos personalizarla para darle el aspecto que nosotros deseemos.</p>
+          <p>Esta personalización la conseguiremos a través de una serie de parámetros que a continuación te presentaremos. Bien, pues vamos a empezar.</p>
+          <h4>Color de fondo: bgcolor</h4>
+            <p>El primer parámetro que debes conocer es el del color de fondo, el “bgcolor”. A través de este parámetro podremos definir el color de fondo que queramos que tenga nuestra página. Un ejemplo muy simple es el siguiente: Si queremos que nuestra página quede con un fondo rojo deberemos escribir:</p>
+            <xmp><body bgcolor=”#FF0000″></body></xmp>
+          <h4>Imagen de fondo: background html</h4>
+            <p>Puede que no quieres que tu página tenga un color sólo de fondo, sino que quieras que tu página tenga una imagen. En ese caso deberás indicarlo con la etiqueta “background”. La etiqueta quedaría de la siguiente manera:</p>
+            <xmp><body background=”URL”></body></xmp>
+            <p>Dónde leemos “URL” deberemos escribir la dirección de la imagen que queramos que sea nuestro fondo. Una cosa muy importante que debes saber es que si la imagen no es suficientemente grande para rellenar toda la página, la imagen se repetirá tanto a lo ancho como a lo largo hasta rellenar todo el espacio.</p>
+          <h4>Color de texto: text</h4>
+            <p>Una vez tenemos el fondo definido, tendremos que predefinir ahora el color del texto de nuestra web. Es decir, tendremos que decirle al navegador de qué color queremos que sea nuestro texto. Esto lo definiremos con el parámetro “text”.</p>
+            <p>Como ejemplo vamos a poner que queremos que nuestro texto sea en negro, con lo que escribiremos lo siguiente:</p>
+            <xmp><body text= “#000000”></body></xmp>
+          <h4>Márgenes: leftmargin, topmargin, rightmargin y bottommargin</h4>
+            <p>Ya sabemos de qué color será nuestro fondo y nuestro texto, pero también podemos predefinir los márgenes de nuestra página web para que queda mucho mejor. Porque no queremos que nuestro texto se quede muy pegada a los márgenes, ¿verdad?</p>
+            <p>Para especificar los márgenes utilizaremos el parámetro margin, con su correspondiente indicación delante. Así encontraremos “leftmargin” para el margen izquierdo, “topmargin” para el margen de arriba, “rightmargin” para el margen de la derecha y “bottommargin” para el margen de abajo.</p>
+            <p>Si queremos que nuestros márgenes sean de 10 píxeles por todas partes escribiremos lo siguiente:</p>
+            <xmp><body leftmargin=”10px” topmargin=”10px” rightmargin=”10px” bottommargin=”10px”></body></xmp>
+          <h4>Color de links: link, alink y vlink</h4>
+            <p>En body también podemos ( y de hecho debemos hacerlo) definir el color de los vínculos de nuestra páginas, definir el color con el que se mostraran los links. Aquí debemos diferenciar tres tipos de instrucciones: Debemos definir el color del link (con la etiqueta “link”), el color del link activo (con la etiqueta “alink”) y el color del link ya visitado (con la etiqueta “vlink”).</p>
+            <p>Así pues, si queremos que nuestra página tenga un color de enlaces (de links) de color rojo y que esos enlaces sean rojos cuando estén activos y se queden en azul cuando estén inactivos deberemos escribir lo siguiente: </p>
+            <xmp><body link= “#FF0000” alink= “#FF0000” vlink= “# 0000FF”></body></xmp>
+      </div>
+      <div class="">
+        <h3>Formateo de texto</h3>
+          <p>El formateo del texto, o sea, el formato del texto, son una serie de etiquetas que escribimos en html rodeando la palabra o el texto y que transforman ese texto en el formato que nosotros le hemos querido dar.</p>
+          <p>Anteriormente ya hemos visto en un pequeño texto introductorio como se ponía la negrita y la itálica. Pero eso era solamente introductorio. A continuación lo vamos a explicar de una forma más detallada.</p>
+          <p>Las etiquetas deben rodear al texto. Es decir, la etiqueta debe abrirse y cerrarse, conteniendo el texto o la palabra que queramos transformar, entre medias. En el ejemplo de la negrita se abriría <xmp><b></xmp> y se cerraría <xmp></b></xmp>.</p>
+          <p>Se pueden combinar diferentes formatos, o sea, diferentes etiquetas. Por ejemplo, si queremos que un texto esté en negrita y en cursiva escribiríamos esto:</p>
+          <p><xmp><b><i></xmp>Este texto está escrito en negrita y en cursiva<xmp></i></b></xmp>.Cuando combines, ten cuidado a la hora de cerrar las etiquetas. Debes cerrar las etiquetas por orden, de la más interior a la más exterior. Por último, recordad que podéis escribir las etiqutes en minúsculas o en mayúsculas.</p>
+          <p>Vamos con los diferentes formateos html que podemos encontrar:</p>
+          <h4>Negrita HTML</h4>
+            <p>Existen dos etiquetas que harán que nuestro texto se convierta en negrita. La utilización de cualquiera de ellas es indiferente. Puedes usar la que prefieras.</p>
+            <p>La primera es la etiqueta <xmp><b></xmp> y la otra es la etiqueta <xmp><strong></xmp>. Aquí va un ejemplo:</p>
+            <p>Este palabra la vamos a poner en <xmp><b>negrita</b></xmp> y esta otra <xmp><strong>también</strong></xmp></P>
+            <p>Este palabra la vamos a poner en <b>negrita</b> y esta otra <strong>también</strong></p>
+          <h4>Cursiva HTML</h4>
+            <p>Para escribir un texto en cursiva debemos utilizar la etiqueta <xmp><i></xmp> (y por supuesto cerrarla con la etiqueta <xmp></i></xmp>).</p>
+          <h4>Subrayado HTML</h4>
+            <p>Si queremos que la palabra o el texto quede subrayado, deberemos rodearlo con la etiqueta <xmp><u></xmp> y cerrarlo con su correspondiente etiqueta. O sea, <xmp></u></xmp>. Así subrayaríamos una frase importante:</p>
+            <p><xmp><u></xmp>Así subrayaríamos una frase importante<xmp></u></xmp></p>
+            <p>Esta frase la vamos a escribir de forma espaciada</p>
+          <h4>Palabras más grandes o más pequeñas</h4>
+            <p>Puede que en una frase queramos destacar un palabra por medio de una variación de tamaño sin necesidad de utilizar los encabezados(los explicaremos más adelante). Pues esta variación de tamaño la conseguiremos gracias a las etiquetas <xmp><big></xmp> y <xmp><small></xmp>.</p>
+            <p>Sus propios nombres en inglés nos indican cuáles serán sus funciones: <xmp><big></xmp> agrandará el texto y <xmp><small></xmp> lo disminuirá.</p>
+            <p>Cada vez que escribamos una etiqueta, haremos el texto un punto más grande. Pero estas etiquetas también la podemos combinar, por lo que si escribimos dos veces la etiqueta <xmp><big></xmp>, haremos crecer la palabra dos puntos.</p>
+            <p>Un ejemplo sería el siguiente:</p>
+            <p>Esta palabra se va a escribir <xmp><small></xmp>pequeñita<xmp></small></xmp>, esta se va a escribir <xmp><big></xmp>más grande<xmp><big></xmp> y ésta <xmp><big><big></xmp>más grande aún<xmp></big></big></xmp>.</p>
+            <p>Esta palabra se va a escribir <small>pequeñita</small>, esta se va a escribir <big>más grande</big> y ésta <big><big>más grande aún</big></big>.</p>
+          <h4>Superíndices y subíndices HTML</h4>
+            <p>Mediante el Html también podemos escribir fórmulas matemáticas.  Gracias a las etiquetas siguientes podrás escribir subíndices y superíndices fácilmente. La etiqueta <sub> te servirá para escribir un subíndice y <sup> será tu etiqueta para un superíndice.</p>
+            <p>Así nos queda un ejemplo como el siguiente:</p>
+            <p>Gracias a estas etiquetas podemos escribir cualquier formula matemática como esta: H <xmp><sub></xmp>2<xmp></sub></xmp> O o números elevados a potencias 7<xmp><sup></xmp>3<xmp></sup></xmp>.</p>
+            <p>Gracias a estas etiquetas podemos escribir cualquier formula matemática como esta: H <sub>2</sub> O o números elevados a potencias 7<sup>3</sup>.</p>
+          <h4>Texto tachado HTML</h4>
+            <p>Existen tres etiquetas diferentes que nos servirán para conseguir que nuestro texto se quede tacahado. Hablamos de las etiquetas <xmp><strike></xmp>, <xmp><s></xmp> y <xmp><del></xmp>. Ambas nos ofrecen el mismo resultado. Aquí tienes la muestra:</p>
+            <p>Si la palabra no me gusta la puedo tachar <strike>así</strike>, <s>así</s> o <del>así</del>. ¡Lo mismo me da!</p>
+      </div>
+      <div class="">
+        <h3>Párrafos y saltos de línea</h3>
+          <p>En este tema vamos a tratar y a explicaros los párrafos y los saltos de línea en html. Porque debemos saber que el html los saltos de línea, es decir, los espacios que hagamos en el código no son interpretados te tal forma.</p>
+          <p>En html para dejar un salto de línea debemos utilizar una serie de etiquetas, de código, que el navegador interpretará cómo tal. Esas etiquetas son <xmp><br/></xmp> <xmp></p></xmp> o <xmp></pre></xmp>. A continuación te explicaremos cada una de ellas.</p>
+        <h4>Saltos de línea HTML</h4>
+          <p>Ya os hemos comentado anteriormente que en html los saltos de línea escritos en código no son tal una vez el navegador interpreta el código. Vamos a explicaros esto con un claro ejemplo:</p>
+          <p>Puedes escribir un texto como este <br/></p>
+          y el navegador no lo interpretará así
+          <p>Y se verá así:</p>
+          <p>Puedes escribir un texto como este
+            y el navegador no lo interpretará así</p>
+          <p>Existen dos etiquetas para indicar que queremos hacer un salto de línea normal. Son las etiquetas <br> y <br/> ambas son interpretadas igual por el navegador. Esta etiqueta no hace falta abrirla y cerrarla, sólo con escribirla el navegador ya la interpreta.</p>
+          <p>Así pues el texto anterior deberíamos escribirlo de la siguiente forma:</p>
+          <p>Puedes escribir un texto como este <br/></p>
+          y el navegador no lo interpretará así
+        <h4>Párrafos en HTML</h4>
+          <p>Para indicarle al navegador que queremos poner ese texto en un párrafo, debemos escribirlo entre las etiquetas <xmp><p></xmp> y su cierre <xmp></p></xmp>.</p>
+          <p>Así el texto quedará dentro de un párrafo, separado por un espacio en blanco por encima y uno por abajo.</p>
+          <p>El texto del párrafo lo puedes alinear utilizando la etiqueta align utilizando los parámetros “center” (para alinearlo al centro), “right” (para alinearlo a la derecha), “left” (para alinearlo a la izquierda) y “justify” (para justificar el texto).</p>
+          <p>Un ejemplo de esta etiqueta con sus respectivos parámetros es el siguiente:</p>
+          <p>Este texto se alineará al centro</p>
+          <p>Este texto se alineará a la derecha</p>
+          <p>Este texto se alineará a la izquierda</p>
+          <p align="center">Este texto se alineará al centro</p>
+          <p align="right">Este texto se alineará a la derecha</p>
+          <p align="left">Este texto se alineará a la izquierda</p>
+        <h4>La etiqueta <xmp><pre></xmp></h4>
+          <p>La etiqueta <xmp><pre></xmp> la puedes utilizar para que el navegador interprete el texto escrito tal y como está.</p>
+          <p>Como ejemplo os mostraremos este texto:</p>
+          <pre>Escribo esta línea así
+
+Dejo dos líneas de separación
+
+
+y escribo tres más.</pre>
+          <p>Sin poner ninguna etiqueta, el navegador respondería así:</p>
+          Escribo esta línea así<br>
+          Dejo dos líneas de separación<br>
+          y escribo tres más.
+          <p>En cambio utilizando la etiqueta <xmp><pre></xmp> y cerrándola con su correspondiente etiqueta, este código:</p>
+          <xmp><pre>Escribo esta línea así
+
+  Dejo dos líneas de separación
+
+
+  y escribo tres más.</pre></xmp>
+          <p>Se vería así:</p>
+          <pre>Escribo esta línea así
+
+Dejo dos líneas de separación
+
+
+y escribo tres más.</pre>
+      </div>
+      <div class="">
+        <h3>Comentarios en HTML</h3>
+          <p>Los comentarios html son textos que van dentro del código fuente pero que no son mostrados por los navegadores. Estos comentarios son muy útiles para los editores de la página, ya que ayudan a una mayor comprensión del código.</p>
+          <p>La forma correcta de escribir un comentario html es la siguiente:</p>
+          <xmp><!--Esto es un comentario--></xmp>
+          <p>Podemos apreciar que para los comentarios no se usan las etiquetas vistas en casi todo el html, aunque la estructura es prácticamente la misma. Hay una apertura y un cierre, y todo lo que va dentro de estos dos elementos es el comentario.</p>
+          El código de apertura es el siguiente: <xmp><!– y el cierre del comentario se escribe así: –></xmp>. Mira el código del siguiente ejemplo:
+          <p>A continuación vamos a escribir un comentario, pero aquí no lo podremos ver porque...<br>
+          <xmp><!--este es el primer comentario que hemos escrito--></xmp>
+...los comentarios no son visibles para el usuario... <br>
+          <xmp><!--otro comentario para editores--></xmp>
+...sólo para los editores de la página</p>
+          <p>Y comprueba a continuación como no vamos a poder ver los comentarios escritos. Sólo podremos hacerlo a través del código fuente de la página.</p>
+          <p>A continuación vamos a escribir un comentario, pero aquí no lo podremos ver porque...<br>
+<!--este es el primer comentario que hemos escrito-->
+...los comentarios no son visibles para el usuario... <br>
+<!--otro comentario para editores-->
+...sólo para los editores de la página</p>
+      </div>
+      <div class="">
+        <h3>Separadores: Etiqueta hr</h3>
+          <p>Para separar un texto de otro o un párrafo de otro podemos utilizar una línea horizontal de un tamaño o un grosor determinado por nosotros. Esa franja la escribimos con la etiqueta <xmp><hr></xmp>. La contrario que muchas etiquetas html, ésta no necesita ser cerrada. Sólo con escribir la etiqueta anterior ya la escribimos.</p>
+          <p>La etiqueta <xmp><hr></xmp>, como muchas otras etiquetas, puede variar de aspecto dependiendo de las reglas CSS que definamos.</p>
+        <h4>Definir su grosor</h4>
+          <p>A continuación te vamos a ofrecer dos ejemplos de franjas con diferentes grosores, siendo la primera 15px y la segunda 2px. La diferencia es abismal.</p>
+          <xmp><hr style="border:15px;"><hr style="border:2px;"></xmp>
+          <p>Y el resultado sería el siguiente:</p>
+        <h4>Definir su anchura</h4>
+          <p>En el caso de no escribir nada (como en los ejemplos anteriores), la franja será predeterminada del 100%. Si queremos que ocupe más o menos tendremos que escribirlo con el atributo CSS width.</p>
+          <p>A continuación vamos a escribir una franja de 75% de ancho:</p>
+          <xmp><hr style="width:75%;"></xmp>
+          <p>Que quedaría de la siguiente manera:</p>
+          <hr style="width:75%;">
+        <h4>Definir su color</h4>
+          <p>También podemos predefinir el color que le queremos dar a la franja con el atributo CSS “border-color”. Es muy sencillo. Por ejemplo, si queremos que nuestra franja sea de color rojo sólo debemos ponerle la etiqueta:</p>
+          <xmp><hr style="border-color:red;"></xmp>
+          <hr style="border-color:red;">
+      </div>
+      <div class="">
+        <h3>Encabezados</h3>
+          <p>Puede que queramos empezar nuestra web o nuestro texto con un encabezado indicando el título del artículo, categoría, etc. Pues bien, para escribir encabezados tenemos que utilizar las etiquetas <xmp><h></xmp>.</p>
+          <p>Esta etiqueta viene acompañada de un número, desde el 1 hasta el 6, predefiniendo éstos el tamaño del encabezado. Así, <xmp><h1></xmp> sería el encabezado más grande mientras que <xmp><h6></xmp> sería el más pequeño.</p>
+          <p>A continuación vamos a mostraros el código de los seis diferentes encabezados:</p>
+          <xmp>
+            <h1>Texto muy grande</h1>
+            <h2>Texto grande</h2>
+            <h3>Texto algo más grande de lo normal</h3>
+            <h4>Texto normal</h4>
+            <h5>Texto pequeño</h5>
+            <h6>Texto muy pequeño</h6>
+          </xmp>
+          <p>Podéis ver el resultado ahora:</p>
+            <h1>Texto muy grande</h1>
+            <h2>Texto grande</h2>
+            <h3>Texto algo más grande de lo normal</h3>
+            <h4>Texto normal</h4>
+            <h5>Texto pequeño</h5>
+            <h6>Texto muy pequeño</h6>
+          <p>Si ya habéis visto el ejemplo os daréis cuenta que cada encabezado está separado del anterior y del siguiente por un salto de línea y que nosotros en el código no hemos escrito nada. Podéis deducir pues, que los encabezados generan por sí solos uno salto de línea.</p>
+          <p>Por último recordaros que la etiqueta <xmp><h></xmp> podemos escribirla tanto en mayúsculas como en minúsculas. Es decir, lo mismo daría escribir <xmp><h1></xmp> que <xmp><H1></xmp>.</p>
+      </div>
+      <div class="">
+        <h3>Caracteres especiales</h3>
+          <p>Las páginas Web están abiertas a todo el mundo y a todos los lenguajes. Pero no todos los lenguajes son iguales. En español, por ejemplo, tenemos algunas letras que son propias de nuestra lengua y que otras no poseen. Por ello, una “ñ” en un navegador de un ordenador de fuera de España puede que no se vea.</p>
+          <p>Para evitar ese problema podemos usar los caracteres especiales de html. No todos los ordenadores leen las mismas letras, pero sí todos leen el mismo código. Un “ñ” escrita como tal no se verá en muchos ordenadores del mundo pero, si por el contrario, escribimos &ntilde; (carácter html para la “ñ”), seguro que se muestra correctamente.</p>
+          <p>En el siguiente artículo veremos los caracteres especiales html.</p>
+        <h4>Caracteres especiales básicos</h4>
+          <p>Estos caracteres son esenciales. No por que no sean interpretados correctamente por el navegador, sino porque estos símbolos mal escritos pueden causar que nuestra web no funcione correctamente.</p>
+          <table width="70%" align="center" border="1" cellspacing="1" cellpadding="5">
+            <tbody>
+              <tr align="center">
+                <td>&amp;amp;</td>
+                <td>&amp;</td>
+                <td>&amp;quot;</td>
+                <td>“</td>
+              </tr>
+              <tr>
+                <td width="34%">&amp;lt;</td>
+                <td width="14%">&lt;</td>
+                <td width="38%">&amp;gt;</td>
+                <td width="14%">&gt;</td>
+              </tr>
+            </tbody>
+          </table>
+        <h4>Caracteres especiales HTML</h4>
+          <table width="70%" align="center" border="1" cellspacing="1" cellpadding="5">
+            <tbody>
+              <tr>
+                <td width="34%">&amp;Iuml;</td>
+                <td width="14%">Ï</td>
+                <td width="38%">&amp;Icirc;</td>
+                <td>Î</td>
+              </tr>
+              <tr>
+                <td>&amp;Ouml;</td>
+                <td>Ö</td>
+                <td>&amp;Ocirc;</td>
+                <td>Ô</td>
+              </tr>
+              <tr>
+                <td>&amp;Uuml;</td>
+                <td>Ü</td>
+                <td>&amp;Ucirc;</td>
+                <td>Û</td>
+              </tr>
+              <tr>
+                <td>&amp;times;</td>
+                <td>×</td>
+                <td>&amp;cent;</td>
+                <td>¢</td>
+              </tr>
+              <tr>
+                <td>&amp;divide;</td>
+                <td>÷</td>
+                <td>&amp;euro;</td>
+                <td>€</td>
+              </tr>
+              <tr>
+                <td>&amp;#147;</td>
+                <td>“</td>
+                <td>&amp;#153;</td>
+                <td>™</td>
+              </tr>
+              <tr>
+                <td>&amp;#148;</td>
+                <td>”</td>
+                <td>&amp;#137;</td>
+                <td>‰</td>
+              </tr>
+              <tr>
+                <td>&amp;Atilde;</td>
+                <td>Ã</td>
+                <td>&amp;aring;</td>
+                <td>å</td>
+              </tr>
+              <tr>
+                <td>&amp;Ntilde;</td>
+                <td>Ñ</td>
+                <td>&amp;Aring;</td>
+                <td>Å</td>
+              </tr>
+              <tr>
+                <td>&amp;Otilde;</td>
+                <td>Õ</td>
+                <td>&amp;Ccedil;</td>
+                <td>Ç</td>
+              </tr>
+              <tr>
+                <td>&amp;atilde;</td>
+                <td>ã</td>
+                <td>&amp;ccedil;</td>
+                <td>ç</td>
+              </tr>
+              <tr>
+                <td>&amp;ntilde;</td>
+                <td>ñ</td>
+                <td>&amp;Yacute;</td>
+                <td>Ý</td>
+              </tr>
+              <tr>
+                <td>&amp;otilde;</td>
+                <td>õ</td>
+                <td>&amp;yacute;</td>
+                <td>ý</td>
+              </tr>
+              <tr>
+                <td>&amp;cedil;</td>
+                <td>¸</td>
+                <td>&amp;raquo;</td>
+                <td>»</td>
+              </tr>
+              <tr>
+                <td>&amp;Aacute;</td>
+                <td>Á</td>
+                <td>&amp;Agrave;</td>
+                <td>À</td>
+              </tr>
+              <tr>
+                <td>&amp;Eacute;</td>
+                <td>É</td>
+                <td>&amp;Egrave;</td>
+                <td>È</td>
+              </tr>
+              <tr>
+                <td>&amp;Iacute;</td>
+                <td>Í</td>
+                <td>&amp;Igrave;</td>
+                <td>Ì</td>
+              </tr>
+              <tr>
+                <td>&amp;#140;</td>
+                <td>Œ</td>
+                <td>&amp;#131;</td>
+                <td>ƒ</td>
+              </tr>
+              <tr>
+                <td>&amp;#135;</td>
+                <td>‡</td>
+                <td>&amp;#134;</td>
+                <td>†</td>
+              </tr>
+              <tr>
+                <td>&amp;auml;</td>
+                <td>ä</td>
+                <td>&amp;acirc;</td>
+                <td>â</td>
+              </tr>
+              <tr>
+                <td>&amp;euml;</td>
+                <td>ë</td>
+                <td>&amp;ecirc;</td>
+                <td>ê</td>
+              </tr>
+              <tr>
+                <td>&amp;iuml;</td>
+                <td>ï</td>
+                <td>&amp;icirc;</td>
+                <td>î</td>
+              </tr>
+              <tr>
+                <td>&amp;ouml;</td>
+                <td>ö</td>
+                <td>&amp;ocirc;</td>
+                <td>ô</td>
+              </tr>
+              <tr>
+                <td>&amp;uuml;</td>
+                <td>ü</td>
+                <td>&amp;ucirc;</td>
+                <td>û</td>
+              </tr>
+              <tr>
+                <td>&amp;Oacute;</td>
+                <td>Ó</td>
+                <td>&amp;Ograve;</td>
+                <td>Ò</td>
+              </tr>
+              <tr>
+                <td>&amp;Uacute;</td>
+                <td>Ú</td>
+                <td>&amp;Ugrave;</td>
+                <td>Ù</td>
+              </tr>
+              <tr>
+                <td>&amp;aacute;</td>
+                <td>á</td>
+                <td>&amp;agrave;</td>
+                <td>à</td>
+              </tr>
+              <tr>
+                <td>&amp;eacute;</td>
+                <td>é</td>
+                <td>&amp;egrave;</td>
+                <td>è</td>
+              </tr>
+              <tr>
+                <td>&amp;Oslash;</td>
+                <td>Ø</td>
+                <td>&amp;yuml;</td>
+                <td>ÿ</td>
+              </tr>
+              <tr>
+                <td>&amp;oslash;</td>
+                <td>ø</td>
+                <td>&amp;THORN;</td>
+                <td>Þ</td>
+              </tr>
+              <tr>
+                <td>&amp;ETH;</td>
+                <td>Ð</td>
+                <td>&amp;thorn;</td>
+                <td>þ</td>
+              </tr>
+              <tr>
+                <td>&amp;eth;</td>
+                <td>ð</td>
+                <td>&amp;AElig;</td>
+                <td>Æ</td>
+              </tr>
+              <tr>
+                <td>&amp;szlig;</td>
+                <td>ß</td>
+                <td>&amp;aelig;</td>
+                <td>æ</td>
+              </tr>
+              <tr>
+                <td>&amp;frac14;</td>
+                <td>¼</td>
+                <td>&amp;nbsp;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>&amp;frac12;</td>
+                <td>½</td>
+                <td>&amp;iexcl;</td>
+                <td>¡</td>
+              </tr>
+              <tr>
+                <td>&amp;frac34;</td>
+                <td>¾</td>
+                <td>&amp;pound;</td>
+                <td>£</td>
+              </tr>
+              <tr>
+                <td>&amp;copy;</td>
+                <td>©</td>
+                <td>&amp;yen;</td>
+                <td>¥</td>
+              </tr>
+              <tr>
+                <td>&amp;reg;</td>
+                <td>®</td>
+                <td>&amp;sect;</td>
+                <td>§</td>
+              </tr>
+              <tr>
+                <td>&amp;ordf;</td>
+                <td>ª</td>
+                <td>&amp;curren;</td>
+                <td><strong>¤</strong></td>
+              </tr>
+              <tr>
+                <td>&amp;sup2;</td>
+                <td>²</td>
+                <td>&amp;brvbar;</td>
+                <td>¦</td>
+              </tr>
+              <tr>
+                <td>&amp;sup3;</td>
+                <td>³</td>
+                <td>&amp;laquo;</td>
+                <td>«</td>
+              </tr>
+              <tr>
+                <td>&amp;sup1;</td>
+                <td>¹</td>
+                <td>&amp;not;</td>
+                <td>¬</td>
+              </tr>
+              <tr>
+                <td>&amp;macr;</td>
+                <td>¯</td>
+                <td>&amp;shy;</td>
+                <td>­</td>
+              </tr>
+              <tr>
+                <td>&amp;micro;</td>
+                <td>µ</td>
+                <td>&amp;ordm;</td>
+                <td>º</td>
+              </tr>
+              <tr>
+                <td>&amp;para;</td>
+                <td>¶</td>
+                <td>&amp;acute;</td>
+                <td>´</td>
+              </tr>
+              <tr>
+                <td>&amp;middot;</td>
+                <td>·</td>
+                <td>&amp;uml;</td>
+                <td>¨</td>
+              </tr>
+              <tr>
+                <td>&amp;deg;</td>
+                <td>°</td>
+                <td>&amp;plusmn;</td>
+                <td>±</td>
+              </tr>
+              <tr>
+                <td>&amp;Euml;</td>
+                <td>Ë</td>
+                <td>&amp;Ecirc;</td>
+                <td>Ê</td>
+              </tr>
+              <tr>
+                <td>&amp;iacute;</td>
+                <td>í</td>
+                <td>&amp;igrave;</td>
+                <td>ì</td>
+              </tr>
+              <tr>
+                <td>&amp;oacute;</td>
+                <td>ó</td>
+                <td>&amp;ograve;</td>
+                <td>ò</td>
+              </tr>
+              <tr>
+                <td>&amp;uacute;</td>
+                <td>ú</td>
+                <td>&amp;ugrave;</td>
+                <td>ù</td>
+              </tr>
+              <tr>
+                <td>&amp;Auml;</td>
+                <td>Ä</td>
+                <td>&amp;Acirc;</td>
+                <td>Â</td>
+              </tr>
+              <tr>
+                <td>&amp;iquest;</td>
+                <td>¿</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
