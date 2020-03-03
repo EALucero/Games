@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>css</title>
+    <title>html</title>
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
@@ -20,33 +20,275 @@
             <p>El parámetro “width” indircará la anchura de la tabla. Esta anchura la podemos poner en píxeles (width= “300”) o con porcentaje (width= “100%”).</p>
             <p>Dos parámetros más son cellspacing (que define el espacio entre las celdas de la tabla) y cellpadding  (que le marca a la tabla el espacio que debe dejar alrededor del texto dentro de una celda).</p>
             <p>Como ejemplo, escribiremos el hipotético supuesto de querer una tabla que sea ancha al 100%, con un borde azul de un píxel de grosor y con un cellpadding de 10 y con un cellspacing de 10. El código quedaría de la siguiente forma.</p>
+            <xmp><table width="100%" border="1" bordercolor="#0000FF" cellspacing="10" cellpadding="10"></table></xmp>
+            <p>Una vez explicadas las tablas, vamos a pasar a explicarte las partes fundamentales de las mismas.</p>
+          <h4>Las filas: <xmp><tr></xmp></h4>
+            <p>Como hemos visto en el encabezado las filas se escriben gracias a las etiquetas <xmp><tr></xmp> con su correspondiente cierre <xmp></tr></xmp>. El contenido de las columnas que están dentro de la fila lo podemos alínear tanto horizontal como verticalmente.</p>
+            <p>Para alinearlo verticalmente utilizaremos el atributo “valign” para poder alinearlo arriba de la celda (“top”), en el centro (“middle”) o debajo (“bottom”).</p>
+            <p>Para alinearlo horizontalmente utilizaremos el atributo “align”. Con este atributo podremos alinear el contenido de las celdas en el centro (“center”), a la izquierda (“left”), a la derecha (“right”) o justificado (“justify”).</p>
+            <p>Por supuesto a las filas también les podemos definir el color de fondo (“bgcolor”) y el color del borde (“bordercolor”).</p>
+          <h4>Las celdas: <xmp><td></xmp></h4>
+            <p>Las celdas que van dentro de cada fila las tenemos que escribirlas con la etiqueta <xmp><td></xmp> y su correspondiente cierre <xmp></td></xmp>.</p>
+            <p>Al igual que en las filas, en las celdas podemos definir el la alineación del contenido que está dentro con los atributos “valign” y “align”.</p>
+            <p>Las celdas poseen unos atributos que nos ayudan a poder agrupar tantas celdas o tantas columnas como indiquemos en él. Para agrupar celdas utilizaríamos el atributo “colspan” y para agrupar celdas el atributo “rowspan”.</p>
+            <p>Por ejemplo, para agrupar en una celda 2 columnas tenemos que escribir: <xmp><td colspan=”2″></td></xmp>. Y para agrupar dos filas, la indicación sería la siguiente: <xmp><td rowspan= “2”></td></xmp>.</p>
+          <h4>Las celdas: <xmp><th></xmp></h4>
+            <p>Las celdas escritas con la etiqueta <xmp><th></xmp> y su correspondiente cierre, admiten los mismos atributos que las etiquetas <xmp><td></xmp> y funcionan de la misma forma, salvo que el contenido que esté dentro de una etiqueta <xmp><th></xmp> está considerado como el encabezado de la tabla, por lo que se creará en negrita y centrado sin que nosotros se lo indiquemos.</p>
+            <p>A continuación vamos a ponerte un pequeño ejemplo de una tabla que combina todas las cosas que hemos ido viendo en el artículo. Estúdiate primero el código, visualiza cómo quedaría la tabla y luego mírala:</p>
             <xmp>
-              <html>
-                <head></head>
-                <body>
-                  Hola mundo!<br>
-                  <b>Esto es negrita.</b><br>
-                  <i>Y esto it&aacute;lica.</i><br>
-                </body>
-              </html>
+              <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+                <tr>
+                  <th>Encabezado 1</th>
+                  <th>Encabezado 2</th>
+                  <th>Encabezado 3</th>
+                </tr>
+                <tr>
+                  <td rowspan="2" valign="middle" align="left">Este texto está alineado al centro verticalmente y a la izquierda horizontalmente</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td colspan="2">&nbsp;</td>
+                </tr>
+              </table>
             </xmp>
-
-            <p>Generará el siguiente resultado:</p>
-            <html>
-              <head></head>
-              <body>
-                Hola mundo!<br>
-                <b>Esto es negrita.</b><br>
-                <i>Y esto it&aacute;lica.</i><br>
-              </body>
-            </html>
-
+            <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+              <tr>
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+                <th>Encabezado 3</th>
+              </tr>
+              <tr>
+                <td rowspan="2" valign="middle" align="left">Este texto está alineado al centro verticalmente y a la izquierda horizontalmente</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan="2">&nbsp;</td>
+              </tr>
+            </table>
+          <h4>nowrap</h4>
+            <p>nowrap es un atributo que le podemos colocar a la etiqueta de la celda y que obligará al navegador a no romper esa línea, o sea, a no hacer ningún salto de línea. Con este atributo en la celda, el navegador no respeta el ancho predefinido de la tabla, si es que lo hubiera, y respeta el ancho de la frase, ya que no puede partirla.</p>
+            <p>Por tanto, si la frase es más larga que el ancho definido de la tabla, ésta se estirará todo lo necesario para albergar la frase sin saltos de línea. El siguiente código nos mostrará como escribir este atributo en la etiqueta de la celda:</p>
+            <xmp>
+              <table width="400" border="1" cellpadding="10" cellspacing="0" bordercolor="#000000">
+                <tr>
+                  <td nowrap>Aunque este texto sea m&aacute;s ancho que los 400 p&iacute;xeles de la tabla, &eacute;sta no puede dividir mediante saltos de l&iacute;nea el contenido de la misma, por lo que se estira para albergar toda la frase.</td>
+                </tr>
+              </table>
+            </xmp>
+            <p>Y a continuación podemos ver el efecto del atributo:</p>
+            <table width="400" border="1" cellpadding="10" cellspacing="0" bordercolor="#000000">
+              <tr>
+                <td nowrap>Aunque este texto sea m&aacute;s ancho que los 400 p&iacute;xeles de la tabla, &eacute;sta no puede dividir mediante saltos de l&iacute;nea el contenido de la misma, por lo que se estira para albergar toda la frase.</td>
+              </tr>
+            </table>
+          <h4>Etiqueta “caption”</h4>
+            <p>Esta etiqueta sirve para poder ponerle un título o encabezado a la tabla. Puedes poder el encabezado arriba o abajo, dónde tu prefieras, mediante la etiqueta “align”: “align=top” para ponerlo arriba y “align=bottom” para ponerlo abajo. En el siguiente ejemplo nosotros lo hemos puesto abajo.</p>
+            <xmp>
+              <table width="50%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#000000">
+                <caption align="bottom">Encabezado de la tabla.</caption>
+                <tr>
+                  <td align="center">Tablita de ejmplo para la etiqueta "caption"</td>
+                </tr>
+              </table>
+            </xmp>
+            <table width="50%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#000000">
+              <caption align="bottom">Encabezado de la tabla.</caption>
+              <tr>
+                <td align="center">Tablita de ejmplo para la etiqueta "caption"</td>
+              </tr>
+            </table>
       </div>
       <div class="">
-        <h2>CSS</h2>
+        <h4>Listas no ordenadas: <xmp><ul></xmp></h3>
+          <p>Las listas no ordenadas van dentro de la etiqueta <xmp><ul></xmp> HTML y de su cierre <xmp><ul></xmp>. Cada punto que queramos añadir a la lista, lo haremos dentro de la etiqueta <xmp><li></xmp> y su cierre.</p>
+          <p>Si no le indicamos nada a la etiqueta <xmp><li></xmp> HTML, ésta se generará de forma automática. Pero si queremos definir nosotros mismo el símbolo del punto, podemos gracias al atributo “type”.</p>
+          <p>Así podemos hacer que la lista esté definida por puntos negros (li type=”disc”), por puntos con el fondo blanco (li type=”circle”) o por cuadrados (li type=”square”). Aunque esta apariencia dependerá del navegador. Hay algunos navegadores que dan otras apariencias a estos mismos atributos.</p>
+          <p>Vamos con un pequeño ejemplo en código:</p>
+          <xmp>
+            <ul>
+              <li type="circle">Esto es un tipo de punto.</li>
+              <li type="square">Este es otro.</li>
+              <li type="disc">Y este es otro diferente.</li>
+            </ul>
+          </xmp>
+          <p>Cuyo resultado visual será el que veremos a continuación:</p>
+          <ul>
+            <li type="circle">Esto es un tipo de punto.</li>
+            <li type="square">Este es otro.</li>
+            <li type="disc">Y este es otro diferente.</li>
+          </ul>
+        <h4>Listas ordenadas: <xmp><ol></xmp></h3>
+          <p>Las listas ordenadas van enmarcadas dentro de las etiquetas <xmp><ol> </ol></xmp>. Cada punto de la lista se escribe con la misma etiqueta que en las no numeradas: <xmp><li></xmp>. Pero al ser listas ordenadas los símbolos serán números y éstos se irán generando automáticamente por orden, conforme escribamos nuevos puntos.</p>
+          <p>En las listas ordenadas podemos hacer que el primer punto comience con el número que nosotros queramos. Lo conseguiremos gracias al atributo “value”. Los siguientes puntos que escribamos se generarán automáticamente por orden, partiendo de ese número.</p>
+          <p>Por ejemplo, si queremos que nuestra lista empiece por el número 20, sólo deberemos escribir lo siguiente:</p>
+          <xmp>
+            <ol>
+              <li value="20">Este será el número 20. </li>
+              <li>Este será el 21. </li>
+              <li> Este será el 22. Y así sucesivamente. </li>
+            </ol>
+          </xmp>
+          <p>Y el resultado será el siguiente:</p>
+          <ol>
+            <li value="20">Este será el número 20. </li>
+            <li>Este será el 21. </li>
+            <li> Este será el 22. Y así sucesivamente. </li>
+          </ol>
+        <h4>Listas de definiciones: <xmp><dl></xmp>, <xmp><dt></xmp> y <xmp><dd></xmp></h4>
+          <p>Si lo que vamos a hacer es un listado de definiciones, podemos usar las etiquetas <xmp><dl></xmp>, <xmp><dt></xmp> y <xmp><dd></xmp>. Vamos a explicarlas por partes:</p>
+          <p>La etiqueta <xmp><dl></xmp> viene de los términos ingleses “Definiton list” y nos indica que dentro de ella, entre ella y su cierre, va a ir una definición.</p>
+          <p>La etiqueta <xmp><dt></xmp> viene de los términos “Definition term” y dentro de ella irá el término que vamos a definir. Para entendernos mejor, dentro de <xmp><dt></xmp> iría el título de la definición.</p>
+          <p>La etiqueta <xmp><dd></xmp> viene de los términos “Definition description” y nos dice que dentro de ésta irá la definición.</p>
+          <p>Si escribimos varios listados de definición, éstas se separarán automáticamente entre ellas para facilitar su diferenciación.</p>
+          <p>Aquí podemos ver un ejemplo de código de dos listado de definición:</p>
+          <xmp>
+            <dl>
+              <dt>Aquí va el término que definiremos</dt>
+              <dd>Y aquí dentro irá la definición propiamente dicha.</dd>
+            </dl>
+            <dl>
+              <dt>Aquí va la segunda definición</dt>
+              <dd>Y aquí dentro irá la segunda definición, separada automáticamente de la anterior.</dd>
+            </dl>
+          </xmp>
+          <p>Cuyo resultado será el siguiente:</p>
+          <dl>
+            <dt>Aquí va el término que definiremos</dt>
+            <dd>Y aquí dentro irá la definición propiamente dicha.</dd>
+          </dl>
+          <dl>
+            <dt>Aquí va la segunda definición</dt>
+            <dd>Y aquí dentro irá la segunda definición, separada automáticamente de la anterior.</dd>
+          </dl>
       </div>
       <div class="">
-        <h2>JS</h2>
+        <h3>Imágenes HTML</h3>
+          <p>Poner imágenes en nuestra web produce unos resultados asombrosos de una manera muy fácil. Vamos a mostrarte como puedes incluir una imagen y los atributos que puedes darle a la misma.</p>
+          <p>El tag básico para colocar una imagen es “img“. Este tag, a diferencia de la gran mayoría de los tags de html, no necesita un cierre. Va acompañado de diferentes atributos que te vamos a explicar a continuación.</p>
+          <p>El atributo “src” es imprescindible para poder colocar una imagen. Este atributo es el que indica dónde se encuentra alojada la imagen que queremos mostrar. Se escribe así: <xmp><img src=”x”></xmp>, siendo “x” la dirección o la url dónde se encuentra situada la foto.</p>
+          <p>La foto podemos alinearla en la página como queramos mediante “align“, utilizando los atributos “left” para alinearla a la izquierda, “right” para alinearla a la derecha, “top” para alinearla arriba, “bottom” para alinearla abajo y “middle” para alinearla al centro.</p>
+          <p>También podemos poner una descripción de la imagen dentro de la misma para que la gente puede leerla al mantener el ratón encima de ella. Esta descripción podemos escribirla mediante el atributo “alt” y lo escribiríamos de la siguiente manera: alt= “x”, siendo “x” la descripción que le gente leerá al pasar el ratón por encima.</p>
+          <p>Debemos aclarar que no con todos los navegadores podemos ver el “alt” de manera visual. Hay algunos que no lo representan.</p>
+          <p>Atributos opcionales pero muy recomendables, son el height y el width. El height marca la altura de la imagen, mientras que el width marca la anchura. Son recomendables porque así ayudaremos al navegador a representar la imagen.</p>
+          <p>Y por último, también queremos mostrarte que le puedes adjudicar un borde a la fotografía. El atributo ya te lo sabes: “border“. Después solo tendrás que definir cuál quieres que sea el grosor del borde.</p>
+          <p>Así las cosas, deberemos escribir este código…</p>
+          <xmp><img src="https://www.hazunaweb.com/imagenes/prueba.jpg" border="1" alt="Este es el ejemplo de un texto alternativo" width="400" height="300"></xmp>
+          <p>…para poder ver esta preciosa fotografía</p>
+          <img src="https://www.hazunaweb.com/imagenes/prueba.jpg" border="1" alt="Este es el ejemplo de un texto alternativo" width="400" height="300">
+        <h4>Cómo hacer una imagen HTML responsive</h4>
+          <p>En la creciente tendencia a la maquetación mobile first, debemos considerar la anchura máxima que una imagen debe tener para poder ser visualizada de forma correcta en diferentes tamaños de pantalla y diferentes dispositivos. Para ello podremos hacer uso de distintas reglas CSS, aplicadas tanto en las hojas de estilo como en el propio documento HTML.</p>
+          <p>Para hacer una imagen responsive adaptada al tamaño de su contenedor, tan solo tienes que añadir el siguiente atributo a la etiqueta img: style=”max-width:100%;width:auto;height:auto;”. Con esto conseguirás que la imagen se adapte a los diferentes cambios en el tamaño de pantalla.</p>
+          <p>Un caso típico es, como dicen en este artículo sobre <a href="https://lawebdetuvida.com/como-hacer-un-logo-gratis/">cómo hacer un logo profesional gratis</a>, la inserción de un logotipo que responda, usando una misma imagen, a diferentes tamaños de pantalla.</p>
+          <p><strong>Ejemplo:</strong></p>
+          <p>Escribiendo este código:</p>
+          <xmp><img src="https://www.hazunaweb.com/imagenes/prueba.jpg" style="max-width:100%;width:auto;height:auto;"></xmp>
+          <p>Conseguiremos esta imagen responsive:</p>
+          <img src="https://www.hazunaweb.com/imagenes/prueba.jpg" style="max-width:100%;width:auto;height:auto;">
+      </div>
+      <div class="">
+        <h3>Mapas de imágenes</h3>}
+          <p>HTML nos permite la opción de crear diferentes enlaces url dentro de una misma imagen. Es decir, podemos hacer que diferentes partes de una imagen tengan enlaces que nos permitan ir a diferentes destinos.</p>
+          <p>Las fotos en las que queramos introducir un mapa de imágenes deberán ser de uno de estos tres formatos: .jpg, .gif o .png, que son los tres formatos recomendables para todos los navegadores.</p>
+          <p>A continuación vamos a explicarte como podemos crear este tag html y los diferentes atributos que posee este tag. Como veremos a lo largo del artículo, lo difícil de crear un mapa de imágenes no es el mapa en sí, sino encontrar las coordenadas en la imagen. Aunque existen programas de edición de imágenes que nos ayudarían en esa tarea.</p>
+        <h4>El tag map</h4>
+          <p>Cómo ya podemos suponer, <xmp><map></xmp> es el tag necesario para poder crear un mapa de imágenes en html. Por supuesto, posee un cierre: <xmp></map></xmp>.</p>
+          <p>Este tag debe ir acompañado del atributo name= “x”, para indicar el nombre del mapa. Por tanto si queremos hacer un mapa que se llame ejemplo 1, escribiremos: <xmp><map name= “ejemplo1”></xmp></p>
+        <h4>Atributo area</h4>
+          <p>El mapa de imágenes lleva un área dentro de la cual podremos pinchar para dirigirnos al destino que hayamos preestablecido. Pero, por supuesto, esa área se la tenemos que indicar al navegador para que la interprete.</p>
+          <p>La zona del enlace se indica dentro de la etiqueta, estableciendo las coordenadas de dicha área. También podemos escribirle un texto alternativo, un “alt”, al área.</p>
+          <p>Existen tres tipos de áreas. Vamos a explicártelas a continuación.</p>
+        <h4>Atributo shape</h4>
+          <p>Este atributo nos indicará el tipo de área que es. Como hemos dicho existen tres tipos: rectangular (rect), poligonal (poly) o circular (circle) y cada una de ellas tiene unas características diferentes. Vamos a profundizar un poco más en ellas.</p>
+          <ul>
+            <li>shape=“rect” : Este tipo de área crea un mapa de imagen rectangular. Para definir la zona que incluirá ese mapa deberemos definir la esquina superior izquierda del área y la esquina inferior derecha.</li>
+            <li>shape=“circle” : Este tipo de área crea un mapa de imagen circular. Nosotros sólo debemos indicarle el centro de la circunferencia y el radio del mismo.</li>
+            <li>shape=“poly” : Este tipo de área es la más versátil de todas, la que más posibilidades nos ofrece, ya que nos permite crear una zona personalizada. Para crearla debemos indicarle los diferentes puntos del polígono que hagamos y de una forma ordenada, siguiendo el camino que nosotros hemos trazado para hacerlo.</li>
+          </ul>
+          <p>Bien, pero…¿y cómo indicamos las coordenadas? Gracias al siguiente atributo.</p>
+        <h4>Atributo coords</h4>
+          <p>El atributo coords se escribe de la siguiente forma: coords= “x,x,x,x”, entendiendo que cada “x” representa un punto en la imagen. Cada coordenada debe ir separada por coma.</p>
+          <p>Y el dónde nos dirigirá esa área nos lo indicará el atributo “href”</p>
+        <h4>Atributo href</h4>
+          <p>Aquí deberemos indicar el destino del área.</p>
+        <h4>usemap</h4>
+          <p>Hasta ahora te habíamos indicado cómo podías escribir un mapa de imágenes y cómo definir su área, pero no te habíamos dicho cómo indicar qué imagen es la que llevará el mapa. Esta acción se hace gracias al atributo usemap.</p>
+          <p>Este atributo se escribe de la siguiente forma: usemap=“#x”, siendo x el nombre del mapa de imágenes que queramos utilizar.</p>
+          <p>Nosotros hemos querido hacerte un ejemplo con la imagen que puedes ver más abajo. Dentro de estas bolas de billar, nosotros hemos hecho un mapa de imágenes con un área circular que coincide con la bola amarilla. Nuestra “href” es la página de inicio de este tutorial. También hemos hecho un área poligonal en la bola negra del fondo que te llevará al inicio del tutorial de css y otro área rectangular en el centro de la imagen, que te redirigirá al inicio del tutorial de php.</p>
+          <p>El código nos ha quedado de la siguiente manera:</p>
+          <xmp>
+            <img src="https://www.hazunaweb.com/imagenes/prueba-mapa.jpg" alt="Prueba de mapa de imágenes" width="300" height="214" border="0" usemap="#billar">
+            <map name="billar">
+              <area alt="Si clícas aquí irás a la página de inicio del tutorial de html" shape="circle" coords="148,154,44" href="/curso-de-html/">
+              <area alt="Si clías aquí irás a la página de inicio del tutorial de css" shape="poly" coords="148,59,142,49,135,41,128,38,121,34,125,25,135,16,155,11,177,19,188,27,187,36,177,39,168,46,162,52,160,61" href="/curso-de-css/">
+              <area alt="Si clías aquí irás a la portada" shape="rect" coords="11,77,288,105" href="/">
+            </map>
+          </xmp>
+        <h4>Y el resultado lo verás si clícas en las zonas adecuadas:</h4>
+        <img src="https://www.hazunaweb.com/imagenes/prueba-mapa.jpg" alt="Prueba de mapa de imágenes" width="300" height="214" border="0" usemap="#billar">
+        <map name="billar">
+          <area alt="Si clícas aquí irás a la página de inicio del tutorial de html" shape="circle" coords="148,154,44" href="/curso-de-html/">
+          <area alt="Si clías aquí irás a la página de inicio del tutorial de css" shape="poly" coords="148,59,142,49,135,41,128,38,121,34,125,25,135,16,155,11,177,19,188,27,187,36,177,39,168,46,162,52,160,61" href="/curso-de-css/">
+          <area alt="Si clías aquí irás a la portada" shape="rect" coords="11,77,288,105" href="/">
+        </map>
+      </div>
+      <div class="">
+        <h3>Enlaces HTML</h3>
+          <p>Los enlaces en HTML nos permiten de una manera muy cómoda redirigir al usuario a otra parte, cuando éste pinche en dicho enlace. Podemos hacer que el usuario se vaya a otra url distinta a la que está, o podemos hacer que vaya a otra parte pero dentro del mismo archivo en el que está, dentro de la misma url.</p>
+          <p>Esta explicación la entenderás más fácilmente cuando te presentemos los tipos de enlaces que hay y veas sus características. Así pues, vamos a ello:</p>
+        <h4>La etiqueta <xmp><a></xmp></h4>
+          <p>Es dentro de esta etiqueta y de su cierre (<xmp></a></xmp>) dónde encontraremos el enlace. Todo lo que esté dentro de ella, ya sea texto o una imagen, estará considerado como un enlace y el navegador lo interpretará así.</p>
+        <h4>Atributo href</h4>
+          <p>Para que un enlace esté activo debemos indicar dentro de él el destino del mismo. Para establecer este destino le colocamos a la etiqueta <xmp><a></xmp> este atributo. La etiqueta completa nos quedaría así:</p>
+          <xmp><a href=“enlace”>Pincha aquí para ir al destino del enlace</a></xmp>
+          <p>Las urls pueden tener dos tipos de rutas o direcciones: Las urls con dirección relativa y las urls con dirección absoluta. Vamos a explicarlas a continuación:</p>
+        <h4>Direcciones absolutas y relativas</h4>
+          <p>Las <u>direcciones absolutas</u> son aquellas que contienen la url completa. En estas direcciones podemos ver todos los elementos de la dirección. Un ejemplo muy claro es el siguiente:</p>
+          <xmp><a href="https://hazunaweb.com/curso-de-html/mapas-de-imagenes/">Artículo de mapas de imágenes</a></xmp>
+          <p>Si pincháramos en el enlace iríamos directamente al artículo de mapas de imágenes del tutorial. Fijaros en lo que hablábamos: podemos apreciar todas las partes de la url.</p>
+          <p>En las <u>direcciones relativas</u> vemos que no está la url completa. En este tipo de direcciones, las partes que faltan de la dirección el navegador las genera de la propia página en la que está el enlace. Por ejemplo, si dentro de la página encontráramos la siguiente url…</p>
+          <xmp><a href=”/curso-de-html/mapas-de-imagenes/”>Artículo de mapas de imágenes</a></xmp>
+          <p>…el navegador entiende que dentro de la página y de la carpeta en la que se encuentra, debe dirigirse al fichero “mapas-de-imagenes”.</p>
+        <h4>Protocolos</h4>
+          <p>Los enlaces nos pueden llevar a url con diferentes protocolos. Nosotros os vamos a presentar los dos más importantes:</p>
+          <ul>
+            <li>http: Este es el protocolo básico de los servidores webs.</li>
+            <li>https: Este protocolo se diferencia del anterior en que es un protocolo cifrado. Es decir, la información que se envía y se recibe con esa url esta siendo encriptada para que nadie más pueda interceptar y usar esa información. Las páginas con este protocolo son las conocidas como “páginas seguras”. Esta encriptación de los datos produce una pequeña ralentización de la página debido a que los datos se envían cifrados.</li>
+          </ul>
+        <h4>Mailto</h4>
+          <p>La url mailto es aquella que te lleva directamente a una dirección de correo y, más concretamente, a redactar un mensaje. Una dirección mailto sería la siguiente:</p>
+          <xmp><a href=“mailto:correodeejemplo@correodeejemplo.com>correodeejemplo@correodeejemplo.com</a></xmp>
+          <p>Fíjate en el ejemplo que acabamos de poner. Nosotros, como texto para albergar el enlace, hemos puesto la misma dirección que la que va a abrir la url. ¿Por qué?</p>
+          <p>El programa de correo que abre el navegador es aquel que el usuario tenga como predefinido. Nosotros te aconsejamos que como texto para albergar el enlace pongas la dirección de correo electrónico. Windows por defecto tiene predeterminado el Outlook y al pinchar en el enlace lo abre directamente. Muchos usuarios prefieren copiar la dirección y pegarla en su programa de correo.</p>
+        <h4>La etiqueta target:</h4>
+          <p>La etiqueta sirve para definir la forma en la que se accederá a la nueva url. Esta etiqueta la escribimos dentro del enlace para predefinirla. Puede ser de diferentes tipos:</p>
+          <ul>
+            <li><strong>_self:</strong> Es el valor por defecto del parámetro target. El enlace se abrirá en el mismo marco en el que está alojado.</li>
+            <li><strong>_blank:</strong> Para hacer que ese enlace se abra en una ventana a parte.</li>
+            <li><strong>_top:</strong> Elimina todos los marcos existente y muestra la nueva página en la ventana original sin marcos.</li>
+            <li><strong>_parent :</strong> Muestra la nueva página en el &lt;frameset&gt; que contiene al marco donde se encuentra alojado el enlace. La etiqueta &lt;frameset&gt; la explicamos en otro artículo.</li>
+          </ul>
+        <h4>Anclas HTML</h4>
+          <p>Un ancla nos sirve para dirigir al usuario a otra parte distinta pero dentro del mismo fichero en el que estamos. Para crear un ancla debemos crear primero el lugar al que queremos acceder. Debemos escribir lo siguiente:</p>
+          <xmp><a name=“ancla”></xmp>
+          <p>Y después debemos escribir un enlace con el código siguiente:</p>
+          <xmp><a href= “#ancla”>Enlace para acceder al ancla</a></xmp>
+          <p>Yo he situado un ancla justo al principio de este artículo. Si pinchas en el siguiente enlace acudirás a ella y verás el efecto.</p>
+          <a href="https://www.hazunaweb.com/curso-de-html/enlaces/#ejemplo">Ir al principio del artículo gracias al ancla</a>
+          <p>Y para terminar te mostraremos como podemos hacer que un enlace nos diriga directamente a una imagen. Le hemos indicado al enlace que nos abra la imagen en una ventana diferente gracias al target:blank. El código es el siguiente:</p>
+          <xmp><a href="/imagenes/prueba.jpg" target="_blank">Ir a ver el ejemplo de prueba </a></xmp>
+          <p>Y el resultado le verás pinchando en aquí: <a href="/imagenes/prueba.jpg" target="_blank">Ir a ver el ejemplo de prueba</p></a>
+          <p>Y terminamos con otro tipo de enlace. Esta vez el enlace está en la imagen. Si pinchas en ella, irás al artículo dónde vimos por primera vez esa fotografía. Primero te mostramos el código:</p>
+          <xmp><a href="/curso-de-html/mapas-de-imagenes/" target="_blank"><img src="https://www.hazunaweb.com/imagenes/prueba-mapa.jpg" alt="Pincha para ir al enlace" width="300" height="214" border="0"></a></xmp>
+          <p>Y aquí tienes la imagen con el enlace. Se abrirá en una ventana nueva gracias al target blank.</p>
+          <a href="/curso-de-html/mapas-de-imagenes/" target="_blank"><img src="https://www.hazunaweb.com/imagenes/prueba-mapa.jpg" alt="Pincha para ir al enlace" width="300" height="214" border="0"></a>
+        <h4>rel=”nofollow” para buscadores</h4>}
+          <p>Aunque esto no es un curso sobre SEO (optimización para buscadores), es importante comentar en este artículo que los enlaces “normales” orientan a Google a la hora de saber qué páginas son importantes y cuáles no. Una páginas con muchos enlaces suele indicar que es más importante que otra que no tiene enlaces. En ocasiones podemos querer poner un enlace pero no transmitir peso, es decir, no indicar a Google que esa página es importante.</p>
+          <p>Podemos querer hacerlo por muchos motivos, por ejemplo, si los usuarios de nuestra página pueden poner enlaces, tal vez no queramos que éstos nos llenen la web de spam poniendo enlaces solo para ganar fuerza. También podemos querer hacerlo internamente dentro de nuestra web porque no queramos que ciertas secciones sean leídas e indexadas por Google, o simplemente porque no las consideremos importantes para el buscador, añadiendo el atributo</p>
+          <xmp>rel=”nofollow”</xmp>
+          <p>dentro de la etiqueta <xmp><a></xmp> indicamos a Google, y otros buscadores, que no transmitan fuerza a dicho enlace.</p>
+          <p>En esta misma página también podéis ejemplos dicho atributo. Por ejemplo, con <xmp><a href=”/contactar/” rel=”nofollow”>Contacto</a></xmp> indicamos que no transmita peso a la sección de contacto.</p>
       </div>
     </main>
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
