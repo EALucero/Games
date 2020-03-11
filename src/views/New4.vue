@@ -1,8 +1,6 @@
 <template>
   <div class="new4">
-
     <img alt="quiebra" src="../assets/mufa.jpg">
-
     <main class="container">
       <h2>El día que la gente de Racing conmovió al mundo</h2>
         <h4>Este 7 de marzo se cumplen 21 años de la fecha en que los hinchas, pese a que Racing no jugaba, coparon el Cilindro para oponerse al cierre del club. Un hecho memorable.</h4>

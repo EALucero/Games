@@ -1,5 +1,6 @@
 <template>
   <div class="list">
+    <head></head>
     <img alt="logo" src="../assets/nysl_logo.png">
     <h2>List of teams</h2>
     <main class="container">
@@ -10,7 +11,7 @@
           </div>
           <div>
             <h3>Boca Juniors</h3>
-            <p></p>
+            <p>0 descensos </p>
           </div>
         </div>
         <div class="box">
@@ -19,7 +20,7 @@
           </div>
           <div>
             <h3>Huracán</h3>
-            <p></p>
+            <p>Fundado en 1999999</p>
           </div>
         </div>
         <div class="box">
@@ -28,7 +29,7 @@
           </div>
           <div>
             <h3>Independiente</h3>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
           </div>
         </div>
         <div class="box">
@@ -37,7 +38,7 @@
           </div>
           <div>
             <h3>Newell´s Old Boys</h3>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
           </div>
         </div>
         <div class="box">
@@ -46,7 +47,7 @@
           </div>
           <div>
             <h3>Racing Club</h3>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
           </div>
         </div>
         <div class="box">
@@ -55,7 +56,7 @@
           </div>
           <div>
             <h3>River Plate</h3>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
           </div>
         </div>
         <div class="box">
@@ -64,7 +65,7 @@
           </div>
           <div>
             <h3>Rosario Central</h3>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
           </div>
         </div>
         <div class="box">
@@ -73,30 +74,54 @@
           </div>
           <div>
             <h3>San Lorenzo</h3>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
           </div>
         </div>
       </section>
     </main>
+    <nav></nav>
   </div>    
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+  .list {
+    background:#347740;
+    color:beige;
+  }
 
   section{
-    background-image: url("../assets/grass.jpg");
-    color:beige;
+    background: url("../assets/paste.jpg");
+    margin: 2%;
+    padding: 2%;
+    border-radius: 25px;
   }
 
   .box{
     display: flex;
     justify-content: space-around; 
-    margin: 5%;
+    height: 16vh;
+    margin: 2%;
     background: rgba(0, 0, 0, 0.600);
     border-radius: 20px;
   }
 
-  p{
+  img{
+    height: 14vh;
+    position: relative;
+    bottom: 8px;
+    margin: 12px;
+  }
+
+  h3{
+    font-size: 16px;
+    margin: 10px;
+    text-align: left;
+  }
+
+   p{
+    font-size: 12px;
+    margin: 10px;
     text-align: left;
   }
 

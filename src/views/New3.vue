@@ -1,8 +1,6 @@
 <template>
   <div class="new3">
-
     <img alt="silbido" src="../assets/amargo.jpg">
-
     <main class="container">
       <h2>Revivió el Rojo</h2>
         <h4>Con goles de Roa, Nani en contra y Romero, Independiente venció 3-0 a Central Córdoba y cortó una racha de cuatro partidos sin triunfos.</h4>

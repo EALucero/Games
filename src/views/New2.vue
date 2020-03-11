@@ -1,8 +1,6 @@
 <template>
   <div class="new2">
-
     <img alt="adentro" src="../assets/mapache.jpg">
-
     <main class="container">
       <h2>Lo ganó Boca y lo perdió River</h2>
         <h4>La reinvención de uno y el bache del otro. Más allá de las polémicas en el último partido, River mostró dificultades en el cierre de la Superliga mientras que Boca tuvo un 2020 implacable.</h4>

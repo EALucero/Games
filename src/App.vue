@@ -3,11 +3,21 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-      <router-link to="/list">List</router-link>
-      <router-link to="/new1">New1</router-link>
-      <router-link to="/new2">New2</router-link>
-      <router-link to="/new3">New3</router-link>
-      <router-link to="/new4">New4</router-link>
+      <div>
+        <router-link to="/list">List</router-link>
+      </div>
+      <div>
+        <router-link to="/new1">New1</router-link>
+        <router-link to="/new2">New2</router-link>
+        <router-link to="/new3">New3</router-link>
+        <router-link to="/new4">New4</router-link>
+      </div>
+      <div>
+        <router-link to="/new5">New5</router-link>
+        <router-link to="/new6">New6</router-link>
+        <router-link to="/new7">New7</router-link>
+        <router-link to="/new8">New8</router-link>
+      </div>
     </div>
     <router-view/>
   </div>

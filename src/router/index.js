@@ -42,6 +42,26 @@ const routes = [
     path: '/new4',
     name: 'New4',
     component: () => import(/* webpackChunkName: "new4" */ '../views/New4.vue')
+  },
+  {
+    path: '/new5',
+    name: 'New5',
+    component: () => import(/* webpackChunkName: "new5" */ '../views/New5.vue')
+  },
+  {
+    path: '/new6',
+    name: 'New6',
+    component: () => import(/* webpackChunkName: "new6" */ '../views/New6.vue')
+  },
+  {
+    path: '/new7',
+    name: 'New7',
+    component: () => import(/* webpackChunkName: "new7" */ '../views/New7.vue')
+  },
+  {
+    path: '/new8',
+    name: 'New8',
+    component: () => import(/* webpackChunkName: "new8" */ '../views/New8.vue')
   }
 ]
 
